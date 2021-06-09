@@ -8,4 +8,5 @@ import (
 
 func InitRoutes(router *gin.Engine) {
 	router.GET("/ping", handler.PingStatus)
+	router.Any("/api/*pattern", handler.LoadBalancer)
 }
